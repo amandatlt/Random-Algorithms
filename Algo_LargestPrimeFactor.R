@@ -5,6 +5,7 @@
 #' @example the number 13195 should return 29
 #'
 
+# find any prime of a number
 find_prime <- function(x) {
   i = floor(sqrt(x))
   while (i > 1) {
@@ -20,8 +21,9 @@ find_prime <- function(x) {
   return(x)
 }
 
+# find largest prime of any number using find_prime function
 largest_prime <- function(x) {
-  V[1] <- x
+  V <- x
   i = 1
   while (x > 1) {
     y <- find_prime(x)
@@ -31,3 +33,5 @@ largest_prime <- function(x) {
   }
   return(max(V))
 }
+
+print(largest_prime(600851475143))
